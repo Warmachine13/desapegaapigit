@@ -1,0 +1,31 @@
+_id: req_1a40da83d89a43c89aa970a57901a866
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1667094140021
+created: 1667094106346
+url: "{{ _.baseUrl }}/api/account/picture"
+name: New Request
+description: ""
+method: PUT
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_d0a526f10e6c480289a5690f617952ed
+      name: picture
+      value: ""
+      description: ""
+      type: file
+      fileName: /home/lucasp/Pictures/unnamed3.jpg
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+authentication: {}
+metaSortKey: -1667094106346
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,25 @@
+_id: req_d21f8f4662714a54a27260e30b04b904
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1667093883319
+created: 1667093329070
+url: "{{ _.baseUrl }}/api/signup/check-email?email=aa@aaa.com"
+name: New Request
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1667093329070
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

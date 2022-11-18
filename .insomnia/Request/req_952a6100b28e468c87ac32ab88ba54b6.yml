@@ -1,0 +1,21 @@
+_id: req_952a6100b28e468c87ac32ab88ba54b6
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1668045186215
+created: 1667421389693
+url: "{{ _.baseUrl }}/api/zipcode?zipCode=35502036"
+name: Get ZipCode
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1667421389693
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
