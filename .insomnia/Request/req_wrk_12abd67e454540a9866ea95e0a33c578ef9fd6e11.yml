@@ -1,0 +1,24 @@
+_id: req_wrk_12abd67e454540a9866ea95e0a33c578ef9fd6e11
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1669171363840
+created: 1669171363840
+url: "{{ base_url }}/category"
+name: ...
+description: ""
+method: PUT
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    disabled: false
+    value: string
+authentication: {}
+metaSortKey: -1669171363840
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

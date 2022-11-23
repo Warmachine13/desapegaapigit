@@ -1,0 +1,21 @@
+_id: req_wrk_12abd67e454540a9866ea95e0a33c5782c6cfeff1
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1669171363828
+created: 1669171363828
+url: "{{ base_url }}/products/{{ uuid }}"
+name: Must return the products of store
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1669171363828
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

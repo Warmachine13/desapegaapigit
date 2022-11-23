@@ -1,8 +1,1162 @@
 _id: spc_9d64a192220b4fd1842645f8f5ea58a7
 type: ApiSpec
 parentId: wrk_12abd67e454540a9866ea95e0a33c578
-modified: 1667093325441
+modified: 1669171393952
 created: 1667093325441
 fileName: desapegaApi.yaml
-contents: ""
+contents: >+
+  {
+      "openapi": "3.0.0",
+      "info": {
+          "title": "Desapega API Documentation",
+          "description": "This is an Desapega API",
+          "version": "1.0.0",
+          "contact": {
+              "email": "marcio@marciodias.me"
+          }
+      },
+      "servers": [
+          {
+              "url": "http://localhost:3023/api"
+          }
+      ],
+      "paths": {
+          "/login": {
+              "post": {
+                  "tags": [
+                      "Login",
+                      "Finished"
+                  ],
+                  "summary": "You must login using the email and password fields to receive a JWT token",
+                  "description": "Login with email and password",
+                  "parameters": [
+
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "accessToken": {
+                                              "type": "string",
+                                              "description": "jwt token"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  },
+                  "requestBody": {
+                      "required": true,
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                 "type": "object",
+                                 "required": ["password", "login"],
+                                 "properties": {
+                                 "email": {
+                                 "type": "string"
+                                 },
+                                 "password": {
+                                  "type": "string"
+                                 }
+                              }
+                          }
+                      }
+                  }
+                  }
+              }
+          },
+          "/login/facebook": {
+              "post": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "Must login send input params",
+                  "description": "Login with facebook",
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  },
+                  "parameters": []
+              }
+          },
+          "/login/google": {
+              "post": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "description": "Login with google",
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  },
+                  "parameters": []
+              }
+          },
+          "/signup": {
+              "post": {
+                  "tags": [
+                      "Finished"
+                  ],
+                  "summary": "",
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  },
+                  "requestBody": {
+                      "required": true,
+                      "content": {
+                          "application/json": {
+                            "schema": {
+                                 "type": "object",
+                                 "required": ["password", "login"],
+                                  "properties": {
+                                 "email": {
+                                 "type": "string"
+                                 },
+                                 "password": {
+                                  "type": "string"
+                              },
+                               "name": {
+                                  "type": "string"
+                              },
+                               "document": {
+                                  "type": "string"
+                              },
+                                "birthday": {
+                                  "type": "string"
+                              },
+                               "adress": {
+                                  "type": "string"
+                              },
+                               "zipcode": {
+                                  "type": "string"
+                              },
+                               "city": {
+                                  "type": "string"
+                              },
+                               "state": {
+                                  "type": "string"
+                              },
+                              "newslater": {
+                                  "type": "string"
+                              },
+                              "number": {
+                                  "type": "string"
+                              },
+                              "country": {
+                              "type": "string"
+                              },
+                              "street": {
+                              "type": "string"
+                              },
+                             "district": {"type": "string"},
+                             "complement":{"type": "string" },
+                              "terms": {
+                              "type": "string"
+                              }
+                                 }}
+                          }}},
+                  "description": "Rota para fazer o cadastro na api "
+              }
+          },
+          "/catalog": {
+              "get": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  },
+                  "parameters": []
+              }
+          },
+          "/store": {
+              "get": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              },
+              "post": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      },
+                    
+                  ],
+                    "requestBody": {
+                      "required": true,
+                      "content": {
+                          "application/json": {
+                            "schema": {
+                                 "type": "object",
+                                 "required": ["password", "login"],
+                                  "properties": {
+                                  "name": {
+                                 "type": "string"
+                                 },
+                                 "description": {
+                                  "type": "string"
+                              }
+                                  
+                                  
+                                  }}}}},
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      },
+                      "403": {
+                          "description": "Error"
+                      }
+                  }
+              },
+              "put": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              }
+          },
+          "/store/{uuid}/like": {
+              "post": {
+                  "tags": [
+                      "Finished"
+                  ],
+                  "summary": "Registering a user's like in a store",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      },
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "uuid",
+                          "in": "path",
+                          "description": "The store uuid",
+                          "required": true,
+                          "example": "35bf4bd9-2e9f-4b06-b42c-656e60e812a2"
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      },
+                      "403": {
+                          "description": "Error"
+                      }
+                  }
+              }
+          },
+          "/bookmark": {
+              "get": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      },
+                      {
+                          "schema": {
+                              "type": "number",
+                              "minimum": 8,
+                              "maximum": 8
+                          },
+                          "name": "productId",
+                          "in": "query",
+                          "description": "The productId to add bookmark",
+                          "required": true
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              },
+              "post": {
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      },
+                    
+                  ],
+                    "requestBody": {
+                      "required": true,
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                 "type": "object",
+                                 "required": ["productId"],
+                                 "properties": {
+                                 "productId": {
+                                 "type": "string"
+                                 },
+                                 
+                              }
+                          }
+                      }
+                  }
+                  },
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              },
+              "delete": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  },
+                  "parameters": []
+              }
+          },
+          "/product": {
+              "get": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              },
+              "post": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      },
+                     
+                  ],
+                    "requestBody": {
+                      "required": true,
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                 "type": "object",
+                                 "required": ["password", "login"],
+                                 "properties": {
+                                 "storeId": {
+                                 "type": "string"
+                                 },
+                                 "name": {
+                                  "type": "string"
+                                 },
+                                   "slug": {
+                                  "type": "string"
+                                 },
+                                   "description": {
+                                  "type": "string"
+                                 },
+                                   "condition": {
+                                  "type": "string"
+                                 },
+                                   "brand": {
+                                  "type": "string"
+                                 },
+                                  "weight": {
+                                  "type": "string"
+                                 },
+                                 "send": {
+                                  "type": "string"
+                                 },
+                                 "terms": {
+                                  "type": "integer"
+                                 },
+                                 "isPublished": {
+                                  "type": "integer"
+                                 }
+                              }
+                          }
+                      }
+                  }
+                  },
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              },
+              "put": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              },
+              "delete": {
+                  "tags": [
+                      "Waiting"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              }
+          },
+          "/category": {
+              "get": {
+                  "tags": [
+                      "Category",
+                      "Finished"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              },
+              "post": {
+                  "tags": [
+                      "Category",
+                      "Finished"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      },
+                     
+                  ],
+                        "requestBody": {
+                      "required": true,
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                 "type": "object",
+                                 "required": ["password", "login"],
+                                 "properties": {
+                                 "name": {
+                                 "type": "string"
+                                 },
+                                 "description": {
+                                  "type": "string"
+                                 }
+                              }
+                          }
+                      }
+                  }
+                  },
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              },
+              "put": {
+                  "tags": [
+                      "Category",
+                      "Finished"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              },
+              "delete": {
+                  "tags": [
+                      "Category",
+                      "Finished"
+                  ],
+                  "summary": "...",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success"
+                      }
+                  }
+              }
+          },
+          "/chat": {
+              "post": {
+                  "tags": [
+                      "Chat",
+                      "Finished"
+                  ],
+                  "summary": "...",
+                  "description": "Create a chat to Store",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      },
+                   
+                  ],
+                    "requestBody": {
+                      "required": true,
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                 "type": "object",
+                                 "required": ["password", "login"],
+                                 "properties": {
+                                 "storeId": {
+                                 "type": "integer"
+                                 },
+                                 "userId": {
+                                  "type": "integer"
+                                 },
+                                  "uuid": {
+                                  "type": "string"
+                                 },
+                                   "createdAt": {
+                                  "type": "string"
+                                 }
+                              }
+                          }
+                      }
+                  }
+                  },
+                  "responses": {
+                      "201": {
+                          "description": "Success",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "uuid": {
+                                              "type": "string",
+                                              "description": "store uuid"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "A chat with the specified uuid was not create.",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "error": {
+                                              "type": "string",
+                                              "description": "Chat Exists"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      },
+                      "403": {
+                          "description": "UnauthorizedError",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "error": {
+                                              "type": "string",
+                                              "description": "Access denied"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              },
+              },
+               "/chat/{uuid}": {
+              "get": {
+                  "tags": [
+                      "Chat",
+                      "Finished"
+                  ],
+                  "summary": "...",
+                  "description": "Get a chat data from uuid",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      },
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "uuid",
+                          "in": "path",
+                          "description": "Send uuid chat",
+                          "required": true
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "uuid": {
+                                              "type": "string",
+                                              "description": "store uuid"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      },
+                      "403": {
+                          "description": "UnauthorizedError",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "error": {
+                                              "type": "string",
+                                              "description": "Access denied"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          },
+          "/chat/{uuid}/send-message": {
+              "post": {
+                  "tags": [
+                      "Chat",
+                      "Finished"
+                  ],
+                  "summary": "...",
+                  "description": "Send message a chat",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "Authorization",
+                          "in": "header",
+                          "description": "JWT access token",
+                          "required": true
+                      },
+                        {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "uuid",
+                          "in": "path",
+                          "description": "Send uuid chat",
+                          "required": true
+                      },
+                      
+                  ],
+                         "requestBody": {
+                      "required": true,
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                 "type": "object",
+                                 "required": ["password", "login"],
+                                 "properties": {
+                                 "chatId": {
+                                 "type": "integer"
+                                 },
+                                 "userId": {
+                                  "type": "integer"
+                                 },
+                                  "message": {
+                                  "type": "string"
+                                 }
+                              }
+                          }
+                      }
+                  }
+                  },
+                  "responses": {
+                      "201": {
+                          "description": "Success",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "uuid": {
+                                              "type": "string",
+                                              "description": "store uuid"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "A chat with the specified uuid was not create.",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "error": {
+                                              "type": "string",
+                                              "description": "Chat Exists"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      },
+                      "403": {
+                          "description": "UnauthorizedError",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "error": {
+                                              "type": "string",
+                                              "description": "Access denied"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          },
+          "/zipcode": {
+              "get": {
+                  "tags": [
+                      "ZipCode",
+                      "Finished"
+                  ],
+                  "summary": "Must search for the zip code and get information regarding the address",
+                  "description": "Search ViaCep Api Service send brazilian ZipCode parameters",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "number",
+                              "minimum": 8
+                          },
+                          "name": "zipCode",
+                          "in": "query",
+                          "description": "The zipCode that needs to be fetched",
+                          "required": true,
+                          "example": 35502036
+                      }
+                  ],
+                  "responses": {
+                      "200": {
+                          "description": "Success",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "cep": {
+                                              "type": "string",
+                                              "description": "cep"
+                                          },
+                                          "logradouro": {
+                                              "type": "string",
+                                              "description": "logradouro"
+                                          },
+                                          "complemento": {
+                                              "type": "string",
+                                              "description": "complemento"
+                                          },
+                                          "bairro": {
+                                              "type": "string",
+                                              "description": "bairro"
+                                          },
+                                          "localidade": {
+                                              "type": "string",
+                                              "description": "localidade"
+                                          },
+                                          "uf": {
+                                              "type": "string",
+                                              "description": "uf"
+                                          },
+                                          "ibge": {
+                                              "type": "string",
+                                              "description": "ibge"
+                                          },
+                                          "gia": {
+                                              "type": "string",
+                                              "description": "gia"
+                                          },
+                                          "ddd": {
+                                              "type": "string",
+                                              "description": "ddd"
+                                          },
+                                          "siafi": {
+                                              "type": "string",
+                                              "description": "siafi"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Check zipCode query string params send min or character limit"
+                      },
+                      "500": {
+                          "description": "Error in ViaCep Api Service"
+                      }
+                  }
+              }
+          },
+          "/purchase": {
+              "get": {
+                  "tags": [
+                      "Purchase",
+                      "Finished"
+                  ],
+                  "summary": "Must return purchase information",
+                  "description": "Search purchase uuid",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "uuid",
+                          "in": "query",
+                          "description": "The purchase data",
+                          "required": true,
+                          "example": "1e029ed5-6080-4fa9-a6ad-ffcd1b8cb5d5"
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "uuid": {
+                                              "type": "string",
+                                              "description": "1e029ed5-6080-4fa9-a6ad-ffcd1b8cb5d5"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: not send params uuid"
+                      },
+                      "500": {
+                          "description": "Server error"
+                      }
+                  }
+              }
+          },
+          "/products/{uuid}": {
+              "get": {
+                  "tags": [
+                      "Products",
+                      "Waiting"
+                  ],
+                  "summary": "Must return the products of store",
+                  "description": "List products store",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "uuid",
+                          "in": "path",
+                          "description": "store uuid",
+                          "required": true,
+                          "example": "1e029ed5-6080-4fa9-a6ad-ffcd1b8cb5d5"
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "uuid": {
+                                              "type": "string",
+                                              "description": "1e029ed5-6080-4fa9-a6ad-ffcd1b8cb5d5"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: not send params uuid"
+                      },
+                      "500": {
+                          "description": "Server error"
+                      }
+                  }
+              }
+          },
+          "/search": {
+              "get": {
+                  "tags": [
+                      "Search",
+                      "Waiting"
+                  ],
+                  "summary": "Must return the products of search",
+                  "description": "Search products",
+                  "parameters": [
+                      {
+                          "schema": {
+                              "type": "string"
+                          },
+                          "name": "search",
+                          "in": "query",
+                          "description": "product name",
+                          "required": true,
+                          "example": "macbook pro"
+                      }
+                  ],
+                  "responses": {
+                      "201": {
+                          "description": "Success",
+                          "content": {
+                              "application/json": {
+                                  "schema": {
+                                      "type": "object",
+                                      "properties": {
+                                          "uuid": {
+                                              "type": "string",
+                                              "description": ""
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: not found products"
+                      },
+                      "500": {
+                          "description": "Server error"
+                      }
+                  }
+              }
+          },
+          "/forget-password": {
+              "post": {
+                  "summary": "",
+                  "description": "",
+                  "parameters": [],
+                  "operationId": "",
+                  "responses": {
+                      "default": {
+                          "description": "Default response"
+                      }
+                  },
+                  "requestBody": {
+                      "required": false,
+                      "content": {
+                          "*/*": {
+                              "schema": {}
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "security": [],
+      "components": {
+          "links": {},
+          "callbacks": {},
+          "schemas": {}
+      }
+  }
+
 contentType: yaml

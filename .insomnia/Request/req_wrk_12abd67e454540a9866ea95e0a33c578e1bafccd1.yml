@@ -1,0 +1,24 @@
+_id: req_wrk_12abd67e454540a9866ea95e0a33c578e1bafccd1
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1669171363831
+created: 1669171363831
+url: "{{ base_url }}/zipcode"
+name: Must search for the zip code and get information regarding the address
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: zipCode
+    disabled: false
+    value: "0"
+headers: []
+authentication: {}
+metaSortKey: -1669171363831
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

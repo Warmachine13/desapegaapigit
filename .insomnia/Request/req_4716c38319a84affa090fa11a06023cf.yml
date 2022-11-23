@@ -1,0 +1,29 @@
+_id: req_4716c38319a84affa090fa11a06023cf
+type: Request
+parentId: fld_3540f81a74464bc3b8b575cf9846534a
+modified: 1669171362792
+created: 1669139767859
+url: "{{ _.baseUrl }}/api/signup"
+name: New Request
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "teste@teste.com",
+    	"password": "tese123"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669139767859
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,21 @@
+_id: req_wrk_12abd67e454540a9866ea95e0a33c5780a552e9a
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1669171363849
+created: 1669171363849
+url: "{{ base_url }}/bookmark"
+name: ...
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1669171363849
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

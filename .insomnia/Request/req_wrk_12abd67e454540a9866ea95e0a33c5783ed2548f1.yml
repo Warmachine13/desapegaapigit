@@ -1,0 +1,24 @@
+_id: req_wrk_12abd67e454540a9866ea95e0a33c5783ed2548f1
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1669171363829
+created: 1669171363829
+url: "{{ base_url }}/purchase"
+name: Must return purchase information
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: uuid
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1669171363829
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

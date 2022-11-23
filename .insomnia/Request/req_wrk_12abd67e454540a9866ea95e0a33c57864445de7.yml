@@ -1,0 +1,40 @@
+_id: req_wrk_12abd67e454540a9866ea95e0a33c57864445de7
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1669171363848
+created: 1669171363848
+url: "{{ base_url }}/product"
+name: ...
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "storeId": "string",
+      "name": "string",
+      "slug": "string",
+      "description": "string",
+      "condition": "string",
+      "brand": "string",
+      "weight": "string",
+      "send": "string",
+      "terms": 0,
+      "isPublished": 0
+    }
+parameters: []
+headers:
+  - name: Authorization
+    disabled: false
+    value: string
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669171363848
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

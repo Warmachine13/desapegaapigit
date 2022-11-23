@@ -1,0 +1,43 @@
+_id: req_wrk_12abd67e454540a9866ea95e0a33c578b3576026
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1669171363855
+created: 1669171363855
+url: "{{ base_url }}/signup"
+name: /signup
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "email": "string",
+      "password": "string",
+      "name": "string",
+      "document": "string",
+      "birthday": "string",
+      "adress": "string",
+      "zipcode": "string",
+      "city": "string",
+      "state": "string",
+      "newslater": "string",
+      "number": "string",
+      "country": "string",
+      "street": "string",
+      "district": "string",
+      "complement": "string",
+      "terms": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669171363855
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

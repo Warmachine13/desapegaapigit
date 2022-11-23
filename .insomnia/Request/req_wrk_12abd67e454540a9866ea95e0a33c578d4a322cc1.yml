@@ -1,0 +1,33 @@
+_id: req_wrk_12abd67e454540a9866ea95e0a33c578d4a322cc1
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1669171363833
+created: 1669171363833
+url: "{{ base_url }}/chat/{{ uuid }}/send-message"
+name: ...
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "chatId": 0,
+      "userId": 0,
+      "message": "string"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    disabled: false
+    value: string
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669171363833
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

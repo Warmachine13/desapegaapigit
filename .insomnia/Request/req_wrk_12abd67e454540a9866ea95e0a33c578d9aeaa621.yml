@@ -1,0 +1,24 @@
+_id: req_wrk_12abd67e454540a9866ea95e0a33c578d9aeaa621
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1669171363825
+created: 1669171363825
+url: "{{ base_url }}/search"
+name: Must return the products of search
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: search
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1669171363825
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

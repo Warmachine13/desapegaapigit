@@ -1,0 +1,24 @@
+_id: req_wrk_12abd67e454540a9866ea95e0a33c5785e2148bd1
+type: Request
+parentId: wrk_12abd67e454540a9866ea95e0a33c578
+modified: 1669171363835
+created: 1669171363835
+url: "{{ base_url }}/chat/{{ uuid }}"
+name: ...
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    disabled: false
+    value: string
+authentication: {}
+metaSortKey: -1669171363835
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
