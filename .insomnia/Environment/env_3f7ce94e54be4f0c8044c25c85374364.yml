@@ -1,14 +1,14 @@
-_id: env_env_7ae2b51c074f4110ce3a83a663afd85bfbbee86e_sub
+_id: env_3f7ce94e54be4f0c8044c25c85374364
 type: Environment
 parentId: env_7ae2b51c074f4110ce3a83a663afd85bfbbee86e
-modified: 1669668438250
-created: 1669171363859
-name: OpenAPI env
+modified: 1669668426792
+created: 1669665841246
+name: Production
 data:
   scheme: http
   base_path: /api
-  host: localhost:3336
-  baseUrl: "{{ _.host }}{{ _.base_path }}"
+  host: localhost:3023
+  baseUrl: https://desapega.fly.dev/api
 dataPropertyOrder:
   "&":
     - scheme
@@ -17,4 +17,4 @@ dataPropertyOrder:
     - baseUrl
 color: null
 isPrivate: false
-metaSortKey: 1669171363859
+metaSortKey: 1669195395816

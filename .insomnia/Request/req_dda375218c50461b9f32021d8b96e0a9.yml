@@ -1,17 +1,21 @@
-_id: req_952a6100b28e468c87ac32ab88ba54b6
+_id: req_dda375218c50461b9f32021d8b96e0a9
 type: Request
 parentId: wrk_12abd67e454540a9866ea95e0a33c578
-modified: 1669666261071
-created: 1667421389693
-url: "{{ _.baseUrl }}/zipcode?zipCode=35502036"
-name: Get ZipCode
+modified: 1670019096003
+created: 1670017727471
+url: "{{ _.baseUrl }}/signup/check-email"
+name: New Request
 description: ""
 method: GET
 body: {}
-parameters: []
+parameters:
+  - id: pair_de05bd9e2e2e4d50ab20da66154da7b2
+    name: email
+    value: z@a
+    description: ""
 headers: []
 authentication: {}
-metaSortKey: -1667421389693
+metaSortKey: -1670017727471
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

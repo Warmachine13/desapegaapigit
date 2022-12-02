@@ -1,7 +1,7 @@
 _id: spc_9d64a192220b4fd1842645f8f5ea58a7
 type: ApiSpec
 parentId: wrk_12abd67e454540a9866ea95e0a33c578
-modified: 1669171393952
+modified: 1670017725816
 created: 1667093325441
 fileName: desapegaApi.yaml
 contents: >+
@@ -53,7 +53,7 @@ contents: >+
                   "requestBody": {
                       "required": true,
                       "content": {
-                          "application/json": {
+                          "application/form-data": {
                               "schema": {
                                  "type": "object",
                                  "required": ["password", "login"],
@@ -83,6 +83,21 @@ contents: >+
                           "description": "Success"
                       }
                   },
+                   "requestBody": {
+                      "required": true,
+                      "content": {
+                          "application/x-www-form-urlencoded": {
+                            "schema": {
+                                 "type": "object",
+                                 "required": ["password", "login"],
+                                  "properties": {
+                                  "token": {
+                                 "type": "string"
+                                 },
+                               
+
+
+                                  }}}}},
                   "parameters": []
               }
           },
@@ -162,7 +177,7 @@ contents: >+
                              "district": {"type": "string"},
                              "complement":{"type": "string" },
                               "terms": {
-                              "type": "string"
+                              "type": "number"
                               }
                                  }}
                           }}},

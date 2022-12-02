@@ -1,15 +1,21 @@
 _id: req_wrk_12abd67e454540a9866ea95e0a33c578d015db91
 type: Request
 parentId: wrk_12abd67e454540a9866ea95e0a33c578
-modified: 1669171363856
+modified: 1670017724817
 created: 1669171363856
 url: "{{ base_url }}/login/facebook"
 name: Must login send input params
 description: ""
 method: POST
-body: {}
+body:
+  mimeType: application/json
+  text: |-
+    {
+    }
 parameters: []
-headers: []
+headers:
+  - name: Content-Type
+    value: application/json
 authentication: {}
 metaSortKey: -1669171363856
 isPrivate: false
